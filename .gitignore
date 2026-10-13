@@ -1,0 +1,53 @@
+# Secrets
+env.json
+
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code (keep launch configs out of the repo)
+.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+pubspec.lock
+
+# Symbolication / obfuscation
+app.*.symbols
+app.*.map.json
+
+# Android
+/android/app/debug
+/android/app/profile
+/android/app/release
+/android/.gradle
+/android/local.properties
+/android/key.properties
+*.jks
+
+# iOS
+/ios/Pods/
+/ios/.symlinks/
+/ios/Flutter/Generated.xcconfig
+/ios/Flutter/flutter_export_environment.sh

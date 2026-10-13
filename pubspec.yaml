@@ -1,0 +1,37 @@
+name: mini_news_intelligence
+description: A business news intelligence app built with Flutter, Riverpod, Hive and NewsAPI.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: '>=3.27.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.6.1
+
+  # Networking
+  dio: ^5.7.0
+
+  # Local persistence
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Navigation
+  go_router: ^14.8.1
+
+  # UI helpers
+  cached_network_image: ^3.4.1
+  url_launcher: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
