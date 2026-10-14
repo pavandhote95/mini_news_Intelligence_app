@@ -4,6 +4,14 @@ A clean, scalable Flutter app that turns a public news API into a focused **busi
 
 Built with **Flutter 3 · Dart 3 (null safety) · Riverpod · Hive · Dio · go_router**, following **Clean Architecture**.
 
+## 📱 Try the app
+
+**[⬇️ Download APK (Google Drive)](https://drive.google.com/file/d/1EKCgmnhJPHuEp4GM5jOZAS9k9y6UDgxc/view?usp=sharing)**
+
+**Demo login:** any valid email + a password of 6+ characters (e.g. `demo@test.com` / `123456`).
+
+> Android only. If prompted, allow **"Install from unknown sources"** for your browser or file manager.
+
 ---
 
 ## ✅ Requirement coverage
