@@ -1,5 +1,5 @@
 abstract final class AppConstants {
-  static const String appName = 'NewsIntel';
+  static const String appName = 'News Intelligence';
   static const String tagline = 'Business news, distilled.';
 
   /// Items requested per page from the API.

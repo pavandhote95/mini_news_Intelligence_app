@@ -52,13 +52,22 @@ class ArticleDetailScreen extends ConsumerWidget {
           SliverAppBar(
             pinned: true,
             expandedHeight: hasImage ? 280 : null,
+            automaticallyImplyLeading: false,
+            leadingWidth: 64,
+            leading: Center(
+              child: _CircleIconButton(
+                tooltip: 'Back',
+                icon: Icons.arrow_back_rounded,
+                onPressed: () => Navigator.of(context).maybePop(),
+              ),
+            ),
             actions: [
-              IconButton(
+              _CircleIconButton(
                 tooltip: 'Copy link',
-                icon: const Icon(Icons.link_rounded),
+                icon: Icons.link_rounded,
                 onPressed: () => _copyLink(context),
               ),
-              const SizedBox(width: 4),
+              const SizedBox(width: 12),
             ],
             flexibleSpace: hasImage
                 ? FlexibleSpaceBar(
@@ -140,6 +149,40 @@ class ArticleDetailScreen extends ConsumerWidget {
         onPressed: () => toggleFavoriteWithFeedback(context, ref, article),
         icon: Icon(isFavorite ? Icons.bookmark_remove_rounded : Icons.bookmark_add_outlined),
         label: Text(isFavorite ? 'Saved' : 'Save'),
+      ),
+    );
+  }
+}
+
+/// Icon button inside a filled circle, so it stays visible over any photo.
+class _CircleIconButton extends StatelessWidget {
+  const _CircleIconButton({
+    required this.icon,
+    required this.onPressed,
+    required this.tooltip,
+  });
+
+  final IconData icon;
+  final VoidCallback onPressed;
+  final String tooltip;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Material(
+      color: scheme.surface.withValues(alpha: 0.85),
+     shape: CircleBorder(side: BorderSide(color: Colors.grey.shade300, width: 1.2)),
+      elevation: 2,
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onPressed,
+        child: Tooltip(
+          message: tooltip,
+          child: SizedBox.square(
+            dimension: 40,
+            child: Icon(icon, size: 22, color: scheme.onSurface),
+          ),
+        ),
       ),
     );
   }

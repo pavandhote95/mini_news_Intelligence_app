@@ -34,12 +34,12 @@ class AppNetworkImage extends StatelessWidget {
     if (imageUrl == null || Uri.tryParse(imageUrl)?.hasScheme != true) {
       return ClipRRect(borderRadius: borderRadius, child: fallback);
     }
-
+ 
     return ClipRRect(
-      borderRadius: borderRadius,
+      borderRadius: borderRadius, 
       child: CachedNetworkImage(
         imageUrl: imageUrl,
-        width: width,
+        width: width, 
         height: height,
         fit: fit,
         fadeInDuration: const Duration(milliseconds: 200),

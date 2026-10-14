@@ -50,6 +50,9 @@ abstract final class ErrorMapper {
       case DioExceptionType.unknown:
         if (e.error is SocketException) return const NetworkFailure();
         return const UnknownFailure();
+      case DioExceptionType.transformTimeout:
+        // TODO: Handle this case.
+        throw UnimplementedError();
     }
   }
 
